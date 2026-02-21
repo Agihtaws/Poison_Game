@@ -1,0 +1,6 @@
+[package]
+name = "poison_game"
+type = "bin"
+authors = [""]
+
+[dependencies]

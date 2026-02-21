@@ -1,0 +1,5 @@
+board_layout = ["0","0","0","1","0","0","0","0","2","0","0","0","1","0","0"]
+salt = "99999"
+commitment = "0x0c26bf49a718f209d2b6ac84c3fb4f033f48a5904adda40e7990d5c3cfa9a942"
+tile_index = "8"
+tile_type_result = "2"
