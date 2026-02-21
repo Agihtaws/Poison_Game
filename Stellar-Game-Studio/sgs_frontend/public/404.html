@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <script>
+      (function () {
+        // GitHub Pages doesn't serve SPA routes directly. Redirect unknown paths
+        // to the app root and encode the route in the hash for client routing.
+        var base = '/Stellar-Game-Studio/';
+        var pathname = window.location.pathname || '/';
+
+        var relative = pathname.startsWith(base)
+          ? pathname.slice(base.length)
+          : pathname.replace(/^\/+/, '');
+        relative = relative.replace(/^\/+/, '');
+
+        var search = window.location.search || '';
+        var hash = window.location.hash || '';
+
+        var target = base;
+        if (relative && relative !== '404.html') {
+          target = base + '#' + relative + search + hash;
+        } else {
+          target = base + search + hash;
+        }
+
+        window.location.replace(target);
+      })();
+    </script>
+  </body>
+</html>
